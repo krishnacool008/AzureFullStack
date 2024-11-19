@@ -1,0 +1,13 @@
+<div class="profile-container">
+    <h1>API Call Result</h1>
+    <div *ngIf="response; else loading">
+      <pre>{{ response | json }}</pre>
+    </div>
+    <ng-template #loading>
+      <p>Loading Response..</p>
+    </ng-template>
+  
+    <div class="token-expiration" *ngIf="tokenExpiration">
+      <p>Token Expiration: {{ tokenExpiration }}</p>
+    </div>
+</div>
